@@ -1,0 +1,8 @@
+
+List of command in terraform : 
+    - terraform init
+    - terraform plan
+    - terraform apply
+    - terrafrom destroy
+    - terraform rm
+    - terraform import
