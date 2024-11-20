@@ -1,0 +1,11 @@
+Example for refer attribute from other resource :
+
+resource "time_static" "time_update" {
+}
+
+resource "local_file" "time" {
+    filename = "/root/time.txt"
+    content = "Time stamp of this file is ${time_static.time_update.id}"
+}
+
+In resource "time", in content value, we take id from resource time_update

@@ -6,3 +6,9 @@ List of command in terraform :
     - terrafrom destroy
     - terraform rm
     - terraform import
+    - terraform taint (or recommend to run terraform apply -replace={resource_attribute})
+    - terraform output
+    - terraform graph (visualize terraform resource)
+    - terraform console (provide interactive console to evaluate expression)
+    - terraform validate (validate if terraform configuration is completed or is there an error, but not look at value of parameter)
+    - terraform fmt (formatting configuration file)

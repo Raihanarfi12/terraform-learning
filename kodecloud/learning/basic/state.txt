@@ -1,0 +1,4 @@
+State in terraform : 
+    - Cannot disabled
+    - Saved in json file
+    - Filename of state : terraform.tfstate

@@ -1,0 +1,24 @@
+Depends_on
+--> Used when we want to create a one resource after other resources created
+
+Type of dependency in terraform : 
+    - Implicit Dependencies 
+        - we don't need tell to terraform which resource depends on/automatically assigned by provider
+        - Example azure subnet will not be created, if we dont have azure vnet
+        - Use reference expressions from attribute
+    - Explicit Dependencies
+        - we need tell to terraform which resource depends on
+        - we can pass parameter depends_on in resource
+        - One resource actually not really need id or other attribute from depended other resources
+
+Example : 
+resource "local_file" "raihan" {
+    filename = "/root/gg"
+    content = "raihan"
+    depends_on = [local_file.arfi]
+}
+
+resource "local_file" "arfi" {
+    filename = "/root/gg"
+    content = "arfi"
+}

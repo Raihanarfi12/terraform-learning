@@ -1,0 +1,9 @@
+How to specify output : 
+    - Create file output.tf
+    - Create which resource want to show
+Example : 
+output "id1" {
+   value = random_uuid.id1.result
+}
+    
+    - We can show output value with command terraform output
