@@ -12,3 +12,4 @@ List of command in terraform :
     - terraform console (provide interactive console to evaluate expression)
     - terraform validate (validate if terraform configuration is completed or is there an error, but not look at value of parameter)
     - terraform fmt (formatting configuration file)
+    - terraform providers (lock/mirror/schema)
