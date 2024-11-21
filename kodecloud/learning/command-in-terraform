@@ -2,6 +2,7 @@
 List of command in terraform : 
     - terraform init
     - terraform plan
+    - terraform plan -destroy
     - terraform apply
     - terrafrom destroy
     - terraform rm
@@ -13,3 +14,6 @@ List of command in terraform :
     - terraform validate (validate if terraform configuration is completed or is there an error, but not look at value of parameter)
     - terraform fmt (formatting configuration file)
     - terraform providers (lock/mirror/schema)
+    - terraform show
+    - terraform state show resource_type.resource_name
+    - terraform state list

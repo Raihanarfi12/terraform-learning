@@ -1,0 +1,20 @@
+For show state of resources in terraform configuration : terraform state list
+
+Condition to resource when terraform configuration change : 
+    - Resource created
+    - Resource destroyed
+    - Resource update
+    - Resource replacement
+    - No action (if we just add comment or formatting configuration)
+    - Drift detection
+    - Dependency changes
+    - Destroy and Recreate cycle
+
+Tips for update terraform configuration :
+    - Use terraform plan (or terraform plan -destroy)
+    - Backup state files
+    - Use lifecycle rules (prevent_destroy,create_before_destroy,ignore_changes) --> for create_before_destroy sometimes cause it will create, then destroy same resource
+    - Use output
+    - Test in staging
+
+Terraform docs : https://developer.hashicorp.com/terraform/tutorials/state/resource-lifecycle
