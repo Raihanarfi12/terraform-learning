@@ -1,7 +1,29 @@
 Example implementation of looping :
-
+'''
 resource "local_sensitive_file" "file" {
     filename = var.users[count.index]
     content = var.content
     count = length(var.users)
 }
+'''
+or if we use for_each, we can implement like this :
+main.tf
+''' 
+resource "local_sensitive_file" "name" {
+    filename = each.value
+    content = var.content
+    for_each = toset(var.users)
+}
+'''
+variables.tf
+'''
+variable "users" {
+    type = list(string)
+    default = [ "/root/user10", "/root/user11", "/root/user12", "/root/user10"]
+}
+variable "content" {
+    default = "password: S3cr3tP@ssw0rd"
+  
+}
+'''
+This resource type will be map/object type, example /root/user10 will be represent as local_sensitive_file.name["/root/user10"]

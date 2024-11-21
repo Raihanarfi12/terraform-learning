@@ -1,0 +1,15 @@
+Version constraint : 
+- !=
+- <
+- >
+- <=
+- >=
+- =
+- ~> 
+    - pessimistic constraint , example ~>1.0.4. In this case we can install 1.0.5 and 1.0.10, but not allow install 1.1.0
+    - ~>1.1, it means we can download version 1.2 and 1.10, but we cannot install 2.0
+
+Note : 
+    - Give quotation mark ("") for version constraint
+
+Example : "> 3.45.0, !=3.46.0, < 3.48.0" or "!=3.17.0"
