@@ -3,9 +3,8 @@ List of command in terraform :
     - terraform init
     - terraform plan
     - terraform plan -destroy
-    - terraform apply
+    - terraform apply [-auto-approve]
     - terrafrom destroy
-    - terraform rm
     - terraform import
     - terraform taint (or recommend to run terraform apply -replace={resource_attribute})
     - terraform output
@@ -17,3 +16,8 @@ List of command in terraform :
     - terraform show
     - terraform state show resource_type.resource_name
     - terraform state list
+    - terraform state (rm/list/pull/push/replcace-provider)
+    - terraform refresh
+    - terraform untaint resource_type.resource_name (unremarked resource that replace then create new one)
+    - terraform taint (mark resource to be replaced and create new one each change state)
+    - terraform console

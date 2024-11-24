@@ -1,0 +1,25 @@
+Environment variable for debugging : 
+- TF_LOG_PATH
+- TF_LOG (TRACE,DEBUG,INFO,WARN,ERROR)
+- TF_LOG_CORE (TRACE,DEBUG,INFO,WARN,ERROR) --> logging scope to terraform core runtime
+- TF_LOG_PROVIDER (TRACE,DEBUG,INFO,WARN,ERROR) --> logging scope to provider-specific
+
+example implementation of TF_LOG for enable logging :
+- export TF_LOG=TRACE
+- export TF_LOG_PATH=logs.txt (export logs from terraform to logs.txt)
+
+Logging level hierarchy TRACE < DEBUG < INFO < WARN < ERROR
+
+The most detailed : TRACE
+
+Logging level :
+
+TRACE: Provides the most detailed logging information, including internal state changes, function calls, and sensitive details.
+DEBUG: Provides detailed debugging information without the extreme verbosity of TRACE.
+INFO: Displays general operational information about Terraform's execution.
+WARN: Logs warnings about potential misconfigurations or non-critical issues that don't halt execution.
+ERROR: Logs only critical errors that cause Terraform to fail.
+
+Taint --> Resouce can be replaced, then new one created (eventhough that there is no change in configuration)
+
+To untaint the resource : terraform untaint resource_type.resource_name
